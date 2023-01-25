@@ -30,13 +30,7 @@ function BillDataTableUser() {
   };
 
   const columns = [
-    {
-      field: "isReimbursement",
-      headerName: "Is Reimbursement?",
-      width: 100,
-      editable: true,
-      description:"Reimbursement",
-    },
+ 
     {
       field: "invoiceId",
       headerName: " Invoice Id",
@@ -208,7 +202,7 @@ function BillDataTableUser() {
       renderCell: () => (
         <a
           style={{ color: "blue", fontWeight: "600", cursor: "pointer" }}
-          href={`http://13.126.160.155:8088/bill/files/get/file/?invoiceId=${idMM}`}
+          href={`http://192.168.1.22:8083/bill/files/get/file/?invoiceId=${idMM}`}
           target="_blank"
         >
           Show Bill
@@ -236,7 +230,7 @@ function BillDataTableUser() {
   useEffect(() => {
     const fetchData = async () => {
       let dataTable = await fetch(
-        `http://13.126.160.155:8088/bill/bill/get/data/${EMPCODE}`
+        `http://192.168.1.22:8083/bill/bill/get/data/${EMPCODE}`
       );
       let table = await dataTable.json();
       let adminTableData = await table.data;

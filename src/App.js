@@ -25,18 +25,18 @@ import FileUpload from "./Component/ReimbursementForm/FileUpload";
 
 
 function App() {
-  useEffect(() => {
-  const fetchData = async () => {
-      let dataTable = await fetch(
-        "http://13.126.160.155:8088/bill/purchaseApproval/get/purchase/reportingManager/A004592036"
-      );
-      let table = await dataTable.json();
-      let adminTableData = await table.data;
-      console.log("data is:", adminTableData)
-    };
-    fetchData();
+  // useEffect(() => {
+  // const fetchData = async () => {
+  //     let dataTable = await fetch(
+  //       "http://192.168.1.22:8088/bill/purchaseApproval/get/purchase/reportingManager/A004592036"
+  //     );
+  //     let table = await dataTable.json();
+  //     let adminTableData = await table.data;
+  //     console.log("data is:", adminTableData)
+  //   };
+  //   fetchData();
 
-  }, []);
+  // }, []);
   const invbillid = localStorage.getItem("BillID");
   const userType = localStorage.getItem("User");
   const status = localStorage.getItem("status");

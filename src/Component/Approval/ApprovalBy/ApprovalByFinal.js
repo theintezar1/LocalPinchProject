@@ -24,7 +24,7 @@ function ApprovalByFinal() {
     const handleFinalStatusUpdate = async () => {
         try {
           let response = await axios.put(
-            `http://13.126.160.155:8088/bill/purchaseApproval/update/cos?approvalId=${id}`,
+            `http://13.126.160.155:8083/bill/purchaseApproval/update/cos?approvalId=${id}`,
             {
                 finalApprovalDate:DATEOFChangesFinalUpdate ,
                 finalApproval: updatefinalStatus,

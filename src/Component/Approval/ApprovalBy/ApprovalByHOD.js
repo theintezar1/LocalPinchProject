@@ -24,7 +24,7 @@ function ApprovalByHOD() {
     const handleHODStatusUpdate = async () => {
         try {
           let response = await axios.put(
-            `http://13.126.160.155:8088/bill/purchaseApproval/update/hod?approvalId=${id}`,
+            `http://13.126.160.155:8083/bill/purchaseApproval/update/hod?approvalId=${id}`,
             {
                 hodAapprovalDate:DATEOFChangesHODUpdate ,
                 hodApproval: updatehodStatus,

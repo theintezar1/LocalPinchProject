@@ -30,7 +30,7 @@ function FileUpload() {
 
       axios
         .post(
-          `http://13.126.160.155:8088/bill/reimbursement/upload/file?employeeCode=${EMPCODE}`,
+          `http://192.168.1.22:8083/bill/reimbursement/upload/file?employeeCode=${EMPCODE}`,
           formData,
           {
             headers: {
