@@ -136,9 +136,9 @@ function MainForm() {
 
     try {
       let response = await axios.post(
-        "http://13.126.160.155:8088/bill/bill/save",
+        "http://192.168.1.22:8083/bill/bill/save",
         {
-          isReimbursement:reimbirsment,
+          
           brand: brand,
           category: category,
           department: department,
@@ -237,7 +237,7 @@ function MainForm() {
 
     const CustomerListData = async () => {
       let response = await fetch(
-        `http://13.126.160.155:8088/bill/dropdown/get/partners/`
+        `http://192.168.1.22:8083/bill/dropdown/get/partners/`
       );
       let data = await response.json();
       setCustomerNameDD(data.data);
@@ -276,7 +276,7 @@ function MainForm() {
       >
         <ThemeProvider theme={theme}>
 
-          <FormControl sx={{ minWidth: 300, width: 300, bgcolor:"white" }} >
+          {/* <FormControl sx={{ minWidth: 300, width: 300, bgcolor:"white" }} >
             <InputLabel id="demo-select-small" required>
             Is Reimbursement?
             </InputLabel>
@@ -293,7 +293,7 @@ function MainForm() {
                 <MenuItem key={"YES"} value={"YES"}>YES</MenuItem>
                 <MenuItem key={"NO"} value={"NO"}>NO</MenuItem>
             </Select>
-          </FormControl>
+          </FormControl> */}
 
           <Autocomplete
             disablePortal
@@ -1134,3 +1134,5 @@ const invoiceTypeDD = [
 const tDSDATA = ["0", "1", "2", "5", "10", "15", "20", "25", "30"];
 
 const ApplicableData = ["Yes", "No"];
+
+

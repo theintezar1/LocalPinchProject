@@ -18,7 +18,7 @@ function InvoiceStatusRemark() {
   const handleInvoiceStatusRemarkUpdate = async () => {
     try {
       let response = await axios.put(
-        ` http://13.126.160.155:8088/bill/bill/update/invoiceStatus/${id}`,
+        ` http://192.168.1.22:8083/bill/bill/update/invoiceStatus/${id}`,
         {
           invoiceStatus: statusRemark,
         }

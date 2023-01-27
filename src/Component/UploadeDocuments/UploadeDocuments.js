@@ -27,7 +27,7 @@ function UploadeDocuments() {
 
       axios
         .post(
-          `http://13.126.160.155:8088/bill/files/upload/file?invoiceId=${id}`,
+          `http://192.168.1.22:8083/bill/files/upload/file?invoiceId=${id}`,
           formData,
           {
             headers: {

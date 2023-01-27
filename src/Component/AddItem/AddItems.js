@@ -66,7 +66,7 @@ function AddItems() {
   useEffect(() => {
     const getData = async () => {
       let response2 = await fetch(
-        `http://13.126.160.155:8088/bill/item/get/${id}`
+        `http://192.168.1.22:8083/bill/item/get/${id}`
       );
       let data2 = await response2.json();
       setTotelItemAmountBB(data2.data);
@@ -81,7 +81,7 @@ function AddItems() {
   useEffect(()=>{
   const ItemListData = async () => {
     let response = await fetch(
-      `http://13.126.160.155:8088/bill/dropdown/get/items/`
+      `http://192.168.1.22:8083/bill/dropdown/get/items/`
     );
     let data = await response.json();
     setItemNameDD(data.data);
@@ -123,7 +123,7 @@ function AddItems() {
 
     try {
       let response = await axios.post(
-        "http://13.126.160.155:8088/bill/item/save",
+        "http://192.168.1.22:8083/bill/item/save",
         {
           amount: amount1,
           amountPaid: totelItemAmount,
@@ -477,7 +477,7 @@ function AddItems() {
       </Box>
       <Box textAlign={"center"}>
         <Button
-          disabled={itemName &&totelItemAmount ? false : true}
+          disabled={ totelItemAmount ? false : true}
           color="success"
           size="large"
           sx={{ width: { sm: "300px", xs: "240px" } }}
@@ -489,7 +489,7 @@ function AddItems() {
       </Box>
       <Box mt={5} sx={{ display: "flex", justifyContent: "center" }}>
         <Button
-        disabled={totelAddItem=="0" || itemName  ? true : false}
+        disabled={totelAddItem=="0"  ? true : false}
           endIcon={<CloudUploadIcon />}
           color="success"
           variant="contained"

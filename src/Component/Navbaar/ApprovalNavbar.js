@@ -28,7 +28,7 @@ function ApprovalNavbar() {
     console.log({});
     try {
       let response = await axios.post(
-        `http://13.126.160.155:8088/bill/login/logout?email=${EMPEMAIL}&employeeCode=${EMPCODE}`,
+        `http://192.168.1.22:8083/bill/login/logout?email=${EMPEMAIL}&employeeCode=${EMPCODE}`,
         {
           email: EMPEMAIL,
         }

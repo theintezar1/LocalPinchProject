@@ -93,7 +93,7 @@ function ApprovalForm() {
     });
     try {
       let response = await axios.post(
-        "http://13.126.160.155:8088/bill/purchaseApproval/save/purchase",
+        "http://192.168.1.22:8083/bill/purchaseApproval/save/purchase",
         {
           brand: brand,
           department: department,

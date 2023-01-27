@@ -270,7 +270,7 @@ function ApprovalAdminDataTabel() {
   useEffect(() => {
     const fetchData = async () => {
       let dataTable = await fetch(
-        "http://13.126.160.155:8088/bill/purchaseApproval/get/data/all/purchase/approval"
+        "http://192.168.1.22:8083/bill/purchaseApproval/get/data/all/purchase/approval"
       );
       let table = await dataTable.json();
       let adminTableData = await table.data;

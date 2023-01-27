@@ -27,7 +27,7 @@ function ApprovalPaymentPage() {
     const handlePaymanetUpdate = async () => {
       try {
         let response = await axios.put(
-          `http://13.126.160.155:8088/bill/purchaseApproval/update/paymentStatus/${id}`,
+          `http://192.168.1.22:8083/bill/purchaseApproval/update/paymentStatus/${id}`,
           {
             paidAmount: approvepaidAmount,
             paymentStatus: approvepaymentStatus,

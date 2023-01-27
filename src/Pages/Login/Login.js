@@ -14,7 +14,8 @@ function Login() {
   const handleSubmit = async () => {
     try {
       let response = await axios.post(
-        "http://13.126.160.155:8088/bill/login/login",
+        "http://192.168.1.22:8083/bill/login/login",
+        
         {
           employeeCode: employeeCode,
           password: password,
