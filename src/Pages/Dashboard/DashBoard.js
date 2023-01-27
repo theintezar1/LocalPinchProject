@@ -65,7 +65,7 @@ function DashBoard() {
             Expense Management
           </p>
         </BOX2>
-
+{/* 
         <BOX2
            sx={{ 
             // backgroundColor: "rgba(255, 186, 255, 0.54)",
@@ -85,7 +85,7 @@ function DashBoard() {
           <p style={{ fontWeight: "400", fontFamily: "sans-serif" }}>
             Approval Management
           </p>
-        </BOX2>
+        </BOX2> */}
 
         {/* <BOX2
            sx={{ 
